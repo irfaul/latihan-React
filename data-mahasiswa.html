@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan React - Intro 1b</title>
+</head>
+<body>
+    <div id="hasil"></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type="text/babel">
+    const hasil = document.getElementById('hasil');
+    function Mhs (props) {
+        return (
+            <p>
+                NIM: {props.nim} <br/>
+                Nama : {props.nama} <br/>
+                Jenis Kelamin: {props.jenis} <br/>
+                Umur : {props.umur} <br/>
+                Jurusan : {props.jurusan} <br/>
+                Angkatan: {props.angkatan}
+            </p>
+        );
+    }
+    function ElementHTML() {
+        return (
+            <div>
+                <h1>Biodata Mahasiswa</h1>
+                <Mhs 
+                    nim="002" 
+                    nama="irfaul" 
+                    jenis="Laki-laki" 
+                    umur="24 Tahun" 
+                    jurusan="Teknik Elektronika"
+                    angkatan="2017" />
+            </div>
+        )
+    }
+    ReactDOM.render(<ElementHTML/>, hasil);
+</script>
+    
+</body>
+</html>
